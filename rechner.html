@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preisrechner BienenAG</title>
+
+    <style>
+        .page-content2 {
+            padding: 20px 20px;
+        }
+
+        <style>.demo-list-item {
+            width: 300px;
+        }
+    </style>
+
+    <script>
+
+        function calculate() {
+
+            preisliste.innerHTML += `
+        <li class="mdl-list__item">
+             <span
+                class="mdl-list__item-primary-content">
+                   ${honig250.value * 3 + honig300.value * 3.60 + honig500.value * 6 + countcandleA.value * 0.30 + countcandleB.value * 1.00 + countcandleC.value * 1.80 + countcandleD.value * 2.50 + Beewaxsmall.value * 2.50 + beewaxlarge.value * 5.00 + Duftkerzeklein.value * 1.30 +Duftkerzemittel.value * 3.40 +Duftkerzegroß.value * 3.00 + Ballonklein.value * 1.00 + Ballongroß.value * 1.50 + bienenwachsA.value * 0.40 + bienenwachsB.value * 1.40 + bienenwachsC.value * 2.80 + bienenwachsD.value * 3.90}
+                   
+                        </span>
+                                                                    
+                         </li>`;
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <body style="background-image:url(backgroundimage.png)">
+        <!-- Always shows a header, even in smaller screens. -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Preisrechner Bienen-AG</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation. We hide it in small screens. -->
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                        <a class="mdl-navigation__link" href="start.html">Start</a>
+                        <a class="mdl-navigation__link" href="exelfile.xlsx">Preisrechner in Excel öffnen</a>
+                        <a class="mdl-navigation__link"
+                            href="https://analytics.we4bee.org/#/hive/5de951fd77a6e500012bffba">Digitaler
+                            Bienenstock</a>
+
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Bienen-AG</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="start.html">Start</a>
+                    <a class="mdl-navigation__link" href="exelfile.xlsx">Preisrechner in Excel öffnen</a>
+                    <a class="mdl-navigation__link"
+                        href="https://analytics.we4bee.org/#/hive/5de951fd77a6e500012bffba">Digitaler Bienenstock</a>
+
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+    </body>
+
+
+    <br>
+    <div class="page-content2">
+
+        <p style="font-family:Bahnschrift">
+            <font size="6">Honig 250g</font>
+        </p>
+        <form onsubmit="calculate();return false;">
+            <input id="honig250" placeholder="Anzahl">
+            <br>
+            <br>
+            <br>
+            <p style="font-family:Bahnschrift">
+                <font size="6">Honig 300g</font>
+            </p>
+            <form onsubmit="calculate();return false;">
+                <input id="honig300" placeholder="Anzahl">
+                <br>
+                <br>
+                <br>
+                <p style="font-family:Bahnschrift">
+                    <font size="6">Honig 500g</font>
+                </p>
+                <form onsubmit="calculate(); return false;">
+                    <input id="honig500" placeholder="Anzahl">
+                    <br>
+                    <br>
+                    <br>
+                    <p style="font-family:Bahnschrift">
+                        <font size="6">Kerze Preisklasse A</font>
+                    </p>
+                    <form onsubmit="calculate(); return false;">
+                        <input id="countcandleA" placeholder="Anzahl">
+                        <br>
+                        <br>
+                        <br>
+                        <p style="font-family:Bahnschrift">
+                            <font size="6">Kerze Preisklasse B</font>
+                        </p>
+                        <form onsubmit="calculate(); return false;">
+                            <input id="countcandleB" placeholder="Anzahl">
+                            <br>
+                            <br>
+                            <br>
+                            <p style="font-family:Bahnschrift">
+                                <font size="6">Kerze Preisklasse C</font>
+                            </p>
+                            <form onsubmit="calculate(); return false;">
+                                <input id="countcandleC" placeholder="Anzahl">
+                                <br>
+                                <br>
+                                <br>
+                                <p style="font-family:Bahnschrift">
+                                    <font size="6">Kerze Preisklasse D</font>
+                                </p>
+                                <form onsubmit="calculate(); return false;">
+                                    <input id="countcandleD" placeholder="Anzahl">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <p style="font-family:Bahnschrift">
+                                        <font size="6">Bienenwachstuch klein</font>
+                                    </p>
+                                    <form onsubmit="calculate(); return false;">
+                                        <input id="Beewaxsmall" placeholder="Anzahl">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <p style="font-family:Bahnschrift">
+                                            <font size="6">Bienenwachstuch groß</font>
+                                        </p>
+                                        <form onsubmit="calculate(); return false;">
+                                            <input id="beewaxlarge" placeholder="Anzahl">
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <p style="font-family:Bahnschrift">
+                                                <font size="6">Duftkerze klein</font>
+                                            </p>
+                                            <form onsubmit="calculate(); return false;">
+                                                <input id="Duftkerzeklein" placeholder="Anzahl">
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <p style="font-family:Bahnschrift">
+                                                    <font size="6">Duftkerze mittel</font>
+                                                </p>
+                                                <form onsubmit="calculate(); return false;">
+                                                    <input id="Duftkerzemittel" placeholder="Anzahl">
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <p style="font-family:Bahnschrift">
+                                                        <font size="6">Duftkerze groß</font>
+                                                    </p>
+                                                    <form onsubmit="calculate(); return false;">
+                                                        <input id="Duftkerzegroß" placeholder="Anzahl">
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        <p style="font-family:Bahnschrift">
+                                                            <font size="6">Ballonkerze klein</font>
+                                                        </p>
+                                                        <form onsubmit="calculate(); return false;">
+                                                            <input id="Ballonklein" placeholder="Anzahl">
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                            <p style="font-family:Bahnschrift">
+                                                                <font size="6">Ballonkerze groß</font>
+                                                            </p>
+                                                            <form onsubmit="calculate(); return false;">
+                                                                <input id="Ballongroß" placeholder="Anzahl">
+                                                                <br>
+                                                                <br>
+                                                                <br>
+                                                                <p style="font-family:Bahnschrift">
+                                                                    <font size="6">Bienenwachskerze Preisklasse A</font>
+                                                                </p>
+                                                                <form onsubmit="calculate(); return false;">
+                                                                    <input id="bienenwachsA" placeholder="Anzahl">
+                                                                    <br>
+                                                                    <br>
+                                                                    <p style="font-family:Bahnschrift">
+                                                                        <font size="6">Bienenwachskerze Preisklasse B
+                                                                        </font>
+                                                                    </p>
+                                                                    <form onsubmit="calculate(); return false;">
+                                                                        <input id="bienenwachsB" placeholder="Anzahl">
+                                                                        <br>
+                                                                        <br>
+                                                                        <br>
+                                                                        <p style="font-family:Bahnschrift">
+                                                                            <font size="6">Bienenwachskerze Preisklasse
+                                                                                C</font>
+                                                                        </p>
+                                                                        <form onsubmit="calculate(); return false;">
+                                                                            <input id="bienenwachsC"
+                                                                                placeholder="Anzahl">
+                                                                            <br>
+                                                                            <br>
+                                                                            <br>
+                                                                            <p style="font-family:Bahnschrift">
+                                                                                <font size="6">Bienenwachskerze
+                                                                                    Preisklasse D</font>
+                                                                            </p>
+                                                                            <form onsubmit="calculate(); return false;">
+                                                                                <input id="bienenwachsD"
+                                                                                    placeholder="Anzahl">
+
+                                                                                <br>
+                                                                                <br>
+                                                                                <br>
+                                                                                <!-- Accent-colored raised button with ripple -->
+                                                                                <button type="submit"
+                                                                                    onsubmit="calculate()"
+                                                                                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                                                                    Preis berechnen
+                                                                                </button>
+                                                                            </form>
+                                                                            <p>
+                                                                            <h5>Zu zahlen:</h5>
+                                                                            </p>
+                                                                            <ul class="demo-list-item mdl-list"
+                                                                                id="preisliste">
+
+                                                                            </ul>
+
+    </div>
+
+
+
+</html>
